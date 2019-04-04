@@ -1,19 +1,15 @@
-
-
-
-
+          // Business interface
 
 function roman(userInput) {
     var numeralInput = parseInt(userInput);
     var arrayOutput = [];
-
-    //This loop turns input number into all I's
+          //This loop turns input number into all I's
     for(var i = 1; i <= numeralInput; i++) {
       arrayOutput.push("I");
     }
     var romanOutputArray = [];
 
-    // These loops search array and writes a M for 1000 I's, D for 500, C for 100, L for 50, X for 10
+    // These loops search array and writes a M for 1000 I's, D for 500, C for 100, L for 50, X for 10 etc.
 
     for (var index = 1; 1000 <= arrayOutput.length; index) {
       arrayOutput.splice(0, 1000);
@@ -67,19 +63,16 @@ function roman(userInput) {
 // This is the output
 
     romanOutputArray.push(arrayOutput.join(""));
-    console.log(romanOutputArray);
-
-  return romanOutputArray.join('');
+    return romanOutputArray.join('');
 }
+
+            // Front end / User Interface
 
 $(function(){
   $("form").submit(function(event) {
     event.preventDefault();
-
     var userInput = $("#inputNumber").val();
-
     var output = roman(userInput);
-
     $("#answer").show();
     $("#outputToUser").text(output);
   });
