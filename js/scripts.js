@@ -1,9 +1,9 @@
-$(function(){
-  $("form").submit(function(event) {
-    event.preventDefault();
 
-    var userInput = $("#inputNumber").val();
 
+
+
+
+function roman(userInput) {
     var numeralInput = parseInt(userInput);
     var arrayOutput = [];
 
@@ -15,51 +15,51 @@ $(function(){
 
     // These loops search array and writes a M for 1000 I's, D for 500, C for 100, L for 50, X for 10
 
-    for (var index = 1; (index * 1000) <= arrayOutput.length; index) {
+    for (var index = 1; 1000 <= arrayOutput.length; index) {
       arrayOutput.splice(0, 1000);
       romanOutputArray.push("M");
     }
-    for (var index = 1; (index * 900) <= arrayOutput.length; index) {
+    for (var index = 1; 900 <= arrayOutput.length; index) {
       arrayOutput.splice(0, 900);
       romanOutputArray.push("CM");
     }
-    for (var index = 1; (index * 500) <= arrayOutput.length; index) {
+    for (var index = 1; 500 <= arrayOutput.length; index) {
       arrayOutput.splice(0, 500);
       romanOutputArray.push("D");
     }
-    for (var index = 1; (index * 400) <= arrayOutput.length; index) {
+    for (var index = 1; 400 <= arrayOutput.length; index) {
       arrayOutput.splice(0, 400);
       romanOutputArray.push("CD");
     }
-    for (var index = 1; (index * 100) <= arrayOutput.length; index) {
+    for (var index = 1; 100 <= arrayOutput.length; index) {
       arrayOutput.splice(0, 100);
       romanOutputArray.push("C");
     }
-    for (var index = 1; (index * 90) <= arrayOutput.length; index) {
+    for (var index = 1; 90 <= arrayOutput.length; index) {
       arrayOutput.splice(0, 90);
       romanOutputArray.push("XC");
     }
-    for (var index = 1; (index * 50) <= arrayOutput.length; index) {
+    for (var index = 1; 50 <= arrayOutput.length; index) {
       arrayOutput.splice(0, 50);
       romanOutputArray.push("L");
     }
-    for (var index = 1; (index * 40) <= arrayOutput.length; index) {
+    for (var index = 1; 40 <= arrayOutput.length; index) {
       arrayOutput.splice(0, 40);
       romanOutputArray.push("XL");
     }
-    for (var index = 1; (index * 10) <= arrayOutput.length; index) {
+    for (var index = 1; 10 <= arrayOutput.length; index) {
       arrayOutput.splice(0, 10);
       romanOutputArray.push("X");
     }
-    for (var index = 1; (index * 9) <= arrayOutput.length; index) {
+    for (var index = 1; 9 <= arrayOutput.length; index) {
       arrayOutput.splice(0, 9);
       romanOutputArray.push("IX");
     }
-    for (var index = 1; (index * 5) <= arrayOutput.length; index) {
+    for (var index = 1; 5 <= arrayOutput.length; index) {
       arrayOutput.splice(0, 5);
       romanOutputArray.push("V");
     }
-    for (var index = 1; (index * 4) <= arrayOutput.length; index) {
+    for (var index = 1; 4 <= arrayOutput.length; index) {
       arrayOutput.splice(0, 4);
       romanOutputArray.push("IV");
     }
@@ -67,13 +67,20 @@ $(function(){
 // This is the output
 
     romanOutputArray.push(arrayOutput.join(""));
+    console.log(romanOutputArray);
+
+  return romanOutputArray.join('');
+}
+
+$(function(){
+  $("form").submit(function(event) {
+    event.preventDefault();
+
+    var userInput = $("#inputNumber").val();
+
+    var output = roman(userInput);
+
     $("#answer").show();
-    $("#outputToUser").text(romanOutputArray.join(''));
+    $("#outputToUser").text(output);
   });
 });
-
-// var romanArray = ["I", "IV", "V", "IX", "X", "L", "C", "D", "M"]
-// var romanArrayTrans = ["I" = 1, "V" = 5, "X" = 10, "L" = 50, "C" = 100, "D" = 500, "M" = 1000]
-
-
-// IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII

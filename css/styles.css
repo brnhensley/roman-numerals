@@ -10,9 +10,12 @@ h1 {
 body {
   background-color: skyblue;
 }
+form {
+  padding-bottom: 50px;
+}
 
 #answer {
   display: none;
-  font-size: 30px:
+  font-size: 30px;
   text-align: center;
 }
