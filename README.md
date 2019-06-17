@@ -1,9 +1,9 @@
-# Leap Year Determiner
+# Roman Numeral Converter
 ***
 
 #### _, 4-4-19
 
-#### By Brian Hensley & Lindsey Baker
+#### A Roman Numeral Converter By Brian Hensley & Lindsey Baker
 
 ## Description
 
@@ -14,18 +14,17 @@
 
 * _Open index.html in your browser_
 
-* _Enter text.
+* _Enter number.
 
-* _Receive your text back translated into Pig Latin.
+* _Receive your number in roman numerals.
 
 |Specs|example input|example output|
 |-|-|-|
 |Rejects non-numerals the user inputs|booty|Please enter a number|
-|Rejects non-integers the user inputs|6.66|Please enter a integer|
+|Rejects non-integers the user inputs|3.66|Please enter a integer|
 |Convert the number value into symbols|2, 55|II, LV|
 |Numbers over 3999 can not be converted|10,000|Please enter a number lower than 4000|
-||||
-||||
+
 
 ## Known Bugs
 
@@ -43,4 +42,4 @@ _I used HTML, CSS, bootstrap, JavaScript, jQuery and a lot of DuckDuckGo-ing to 
 
 *GPL, keep information free.*
 
-Copyright (c) 2016 **_Brian Hensley & Megan Schulte_**
+Copyright (c) 2016 **_Brian Hensley & Lindsey Baker_**
